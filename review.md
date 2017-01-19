@@ -10,6 +10,3 @@
 - Why do we write `<img />` and not `<img></img>`?
 - Why is it important to keep semantics (HTML) separate from style (CSS)?
 
-## Homework
-
-https://github.com/ga-dc/html_resume
