@@ -346,19 +346,3 @@ When writing HTML, *think only of the semantics*. If you find yourself thinking,
 This is why HTML is usually written first in one file, and then its CSS is written in another.
 
 Remember: *If you write HTML perfectly, you'll never need to touch it once you start writing CSS.*
-
-### During this class, you are not allowed to use these tags:
-```html
-<br />
-<hr />
-<small>
-<big>
-<b>
-<i>
-<u>
-<center>
-<font>
-<pre>
-<code>
-<kbd>
-```
