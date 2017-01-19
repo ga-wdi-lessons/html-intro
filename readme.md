@@ -15,7 +15,7 @@
 
 ## The purpose of this lesson
 
-We want to give you a high-level look at how the web works, and then, more interestingly, go through how to make a website using HTML and CSS. In order, read through all the files in this repository — except the `.travis.yml` and `LISCENSE` ones. You are encouraged to complete the included excercises, but the only deliverable is to submit an issue to this repo with a list of three things you learned from the lesson plan.
+We want to give you a high-level look at how the web works, and then, more interestingly, go through how to make a website using HTML and CSS. In order, read through all the files in this repository — except the `.travis.yml` and `LICENSE` ones. You are encouraged to complete the included excercises, but the only deliverable is to submit an issue to this repo with a list of three things you learned from the lesson plan.
 
 ##### Have you used a website-builder like Squarespace or Wix or Wordpress or Drupal before?
 ##### Why are we going into HTML and CSS and code in general, when there are services that make websites for you without you having to touch a line of code?
