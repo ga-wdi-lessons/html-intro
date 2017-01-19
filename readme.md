@@ -13,9 +13,9 @@
 - Link to a given file using either absolute and relative paths.
 - Use Chrome Dev Tools to inspect an element.
 
-## The purpose of this class
+## The purpose of this lesson
 
-We'll be going over how the web works, and then, more interestingly, how to make a website using HTML and CSS.
+We want to give you a high-level look at how the web works, and then, more interestingly, go through how to make a website using HTML and CSS. In order, read through all the files in this repository — except the `.travis.yml` and `LISCENSE` ones. You are encouraged to complete the included excercises, but the only deliverable is to submit an issue to this repo with a list of three things you learned from the lesson plan.
 
 ##### Have you used a website-builder like Squarespace or Wix or Wordpress or Drupal before?
 ##### Why are we going into HTML and CSS and code in general, when there are services that make websites for you without you having to touch a line of code?
@@ -28,4 +28,3 @@ Content Management Systems, aka CMS-es, aka or website-builders, will quickly gi
 
 If, however, you want to have a site that's 100% the way you want it, and to have complete control over your appearance and product, then you need to pop the hood and use code.
 
-## Let's talk about how the web works...
