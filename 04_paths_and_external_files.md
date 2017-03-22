@@ -100,44 +100,4 @@ h2{
 }
 ```
 
-This is what we see in the Fresh Prince HTML copied above. We're using the `<link>` tag to "grab" another file and include it in this one -- giving it the *relation* of `stylesheet`. This is exactly like copying a stylesheet and pasting it inside `<style>` tags in the `<head>`, like we did in the previous example.
-
 This is the tidiest and "best" way to use styles.
-
-So why isn't it working?
-
-## The browser can't find the file!
-
-We have `<link rel="stylesheet" href="styles.css" />`, but the browser can't find the `styles.css` file by following those directions. This is the same reason the image is broken: the browser can't find `bball.jpg`.
-
-This is an example of a **relative path**. Its opposite is an **absolute path**.
-
-##### How would you give me directions to the 8th floor bathroom from this classroom?
-##### How would you give me directions to the 8th floor bathroom if I was at my parents' house in Montana?
-##### How would you give me directions to the 8th floor bathroom if I were to spontaneously generate at a random point in the Universe?
-
-A *relative path* tells you how to get somewhere from your current frame of reference. An *absolute path* tells you how to get somewhere from the *most general frame of reference you could possibly have*.
-
-My mailing address is an absolute path. It gives directions as if my frame of reference was the entire US, instead of specifically Washington, DC.
-
-But it's also a relative path, because my frame of reference could be even more general. What if I was in another country?
-
-An absolute path on the Internet says where to retrieve a file relative *the entire Internet*. They always begin with `http://`, `https://`, or something similar. You might see `file://`, which is an absolute path saying where to retrieve a file relative your computer.
-
-The absolute path for a webpage is shown in your browser's address bar. If I look at the Fresh Prince webpage on my desktop, its path is:
-
-```
-file:///Users/robertthomas/Desktop/belair.html
-```
-
-If you were to paste that into your web browser, your browser would look inside the `Users` folder on your computer for a `robertthomas` folder, then `Desktop`, then `belair.html`... and presumably it wouldn't find anything!
-
-`bball.jpg`, by itself, is a relative path. It tells the browser, "look inside the folder you're currently in for a file called `bball.jpg`". The browser will then look inside the folder that contains your `belair.html` -- that is, your Desktop folder -- for `bball.jpg`... and won't find it.
-
-In a path, a slash `/` means "go inside this folder". The browser interprets the thing after the last slash as a file it's supposed to try to open. So if you write `images/bball.jpg`, the browser is going to look inside your Desktop for another folder called `images`, and then inside that for `bball.jpg`... and still won't find it.
-
-You can go *outside* a folder by writing two dots `..`. If you write `../bball.jpg`, that means "look inside the folder that *contains* my Desktop for a file called `bball.jpg`". `../../../bball.jpg` would mean "go 'up' three folders and look for `bball.jpg`".
-
-To make this webpage work, you either need to replace the image's `src` with the absolute path `http://ga-dc.github.io/belair_biography/bball.jpg`, or you need to make the relative path work by downloading `bball.jpg` and putting it in the same folder with your `belair.html`. Same for the `styles.css`.
-
-[Insert DC Tree navigation here](https://github.com/ga-dc/dc_directory_tree)

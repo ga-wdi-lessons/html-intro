@@ -80,4 +80,3 @@ A webpage is a file written mainly in a language called HTML. Web browsers turn 
 This is called *abstraction*: taking something super granular and turning it into something easier to grasp. For example, turning digital signals into HTML, or turning HTML into a visual webpage.
 
 Next, we'll get into HTML...
-

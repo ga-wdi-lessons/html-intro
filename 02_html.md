@@ -61,6 +61,7 @@ However, this would be **wrong**:
 ```
 
 Now the `underline` element ends sort-of inside the `orange` element and also sort-of outside it.
+Nested HTML Elements must be **completely** enclosed by their **parent** element.
 
 So now our whole webpage looks like this:
 
@@ -88,6 +89,7 @@ Thunderpants.
 <div class="setup">What do you call a cow with no legs?</div>
 Ground beef.
 ```
+
 ```css
 .setup{
   color: green;
@@ -142,11 +144,9 @@ That is, the things with the `class` of `green` are now `red`. That's really con
 
 ## This introduces the separation of semantics and style
 
-This is the most important rule of web design: *you should never put anything indicative of style in your HTML*. That is, you should never give elements classes of `centered` or `big` or `pink`. Instead, you should give them classes like `header` or `paragraph` or `punchline`.
+This is one of the most important rule of web design: *you should never put anything indicative of style in your HTML*. That is, you should never give elements classes of `centered` or `big` or `pink`. Instead, you should give them classes like `header` or `paragraph` or `punchline`.
 
 This is called **semantic naming**: naming things according to their *function*, rather than how you want them to look. This is because *form follows function*: the way you want elements to look is *always* based on the purpose of the element on the page.
-
-You always want headers to stand out and be obvious. You always want paragraphs to use Times New Roman. You always want links to be blue, unless they're in your navigation bar, in which case you want them to be grey.
 
 HTML is usually written first in one file, and then its CSS is written in another. *If you write HTML perfectly, you'll never need to touch it once you start writing CSS.*
 
@@ -196,7 +196,7 @@ This is because different computers have different ways of translating 0s and 1s
 
 This is an example of an **encoding error**: different computers recording quotation marks or apostrophes as different sequences of 0s and 1s.
 
-Reglar straight quotes, `"`, are a standard character. But curved quotes -- which Word uses -- are a special character (hence why I can't include them in these notes). To use them on a webpage, you'd write `&ldquo;` or `&rdquo;`.
+Regular straight quotes, `"`, are a standard character. But curved quotes -- which Word uses -- are a special character (hence why I can't include them in these notes). To use them on a webpage, you'd write `&ldquo;` or `&rdquo;`.
 
 Special characters all have the same form: an ampersand, followed by an abbreviation, followed by a semicolon.
 
@@ -220,10 +220,9 @@ For a great example, go to http://www.theoatmeal.com, and look at the source cod
 
 - They're often used to leave notes to other developers (including jokes), and yourself
 - You can "comment out" pieces of code. This lets you test different pieces of code without needing to delete and copy and paste things.
+- However, you should **always** get rid of commented out code before deploying it online
 
-## HTML Tag Matching
-
-##### [See if you can match the descriptions of elements and special characters on the left to what they describe on the right.](http://ga-dc.github.io/html_tag_matching/)
+## Common HTML Tags
 
 Remember: an element's name is usually an abbreviation. Click the blue circle on the bottom-right to scramble the items.
 
@@ -233,7 +232,7 @@ Remember: an element's name is usually an abbreviation. Click the blue circle on
 ```
 <img src="http://images.com/image.jpg" alt="This is an image" />
 ```
-The `alt` attribute is what text is shown when the image can't be seen by the user: if the image doesn't load, or if the user is blind. This is **required by law** as a result of the Americans With Disabilities act, even though most "seeing" people will never know it's there.
+The `alt` attribute is what text is shown when the image can't be seen by the user: if the image doesn't load, or if the user is blind. For any website owned or associated with the government, this is **required by law** as a result of the Americans With Disabilities act, even though most "seeing" people will never know it's there.
 
 `<img />` is an example of a **self-closing tag**. There are only a couple of these. They're elements that don't have any text content, so there's not any point in having an open *and* a close tag.
 
@@ -256,9 +255,9 @@ Generally, a page will have only one `<h1>` because that's the *most important* 
 
 Don't skip from `<h1>` to `<h6>`. Go in order.
 
-- `<q>` and `<blockquote>`: In web design, a **block** is a piece of content that occupies its own main "chunk" of the page. The other **block elements** include `<p>`, `<div>`, and `<h1>` through `<h6>`. A long or important quote should probably have its own block of the page.
+- In web design, a **block** element is an element that occupies its own main "chunk" of the page. The other **block elements** include `<p>`, `<div>`, and `<h1>` through `<h6>`.
 
-Shorter and less-important quotes will probably go *inside* a block. Elements that go inside blocks are called **inline**. Other **inline elements** include `<em>`, `<strong>`, and `<a>`.
+Elements that go inside blocks and do not take up space across the entire page are called **inline**. Other **inline elements** include `<em>`, `<strong>`, and `<a>`.
 
 - `<em>` and `<strong>`: The difference is that things that are "emphasized" aren't necessarily loud (or "strong"), and things that are strong are not necessarily emphasized.
 
@@ -299,36 +298,6 @@ This is *bad*:
   <li>Brown paper packages</li>
   <li>Schnitzel with noodles</li>
 </ul>
-```
-
-- `<dl>`: A **definition list** is like a dictionary representation of things:
-
-```html
-<dl>
-  <dt>Robin</dt>
-    <dd>A cool dude</dd>
-    <dd>A WDI teacher</dd>
-  <dt>Jesse</dt>
-    <dd>Also a cool dude</dd>
-    <dd>A guy with very long hair</dd>
-    <dd>A WDI teacher</dd>
-</dl>
-```
-
-### So why have unordered and ordered lists?
-
-Why do we have this weird collection of elements? The people responsible for HTML tried to create a set of built-in elements that would capture most of the semantic situations in which you'd find yourself.
-
-Putting it another way, they tried to provide all the elements you might want when writing a book.
-
-Definition lists might seem really specific, but they might be good to use for a list of items on a webstore:
-```html
-<dl>
-  <dt>Alpaca Socks</dt>
-    <dd class="product_image"><img src="socks.jpg" /></dd>
-    <dd class="description">These socks are so warm and fuzzy!</dd>
-    <dd class="pay"><a href="http://paypal.com/socks">Click here</a> to buy them.</dd>
-</dl>
 ```
 
 ## HTML stands for Hypertext Markup Language
